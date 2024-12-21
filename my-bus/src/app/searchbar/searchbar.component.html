@@ -1,0 +1,8 @@
+<div class="d-flex gap-2 justify-content-center">
+    <input type="text" name="From Location" ng-model="user.name"  placeholder="From Location" required>
+<input type="text" name="To Location" ng-model="user.name" placeholder="To Location" required>
+<button class="btn-success btn">Search</button>
+</div>
+
+
+<p-autocomplete [(ngModel)]="value" [dropdown]="true" [suggestions]="items" (completeMethod)="search($event)" />
