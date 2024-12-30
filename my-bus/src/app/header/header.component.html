@@ -1,13 +1,28 @@
 <div class="d-flex justify-content-center bg-black">
     <ul class="d-flex gap-3 list-unstyled mt-2">
         <li class ="fs-5 fw-medium text-light">
-            <a class="text-decoration-none text-warning" href="#">KSRTC</a>
+            <a class="text-decoration-none text-warning" href="#" (click)="changeTab('ksrtc')">KSRTC</a>
         </li>
         <li class ="fs-5 fw-medium text-light"> 
-            <a class="text-decoration-none text-info" href="#">BMTC</a>
+            <a class="text-decoration-none text-info" href="#" (click)="changeTab('bmtc')">BMTC</a>
         </li>
         <li class ="fs-5 fw-medium text-light"> 
-            <a class="text-decoration-none text-success" href="#">NAMMA METRO</a>
+            <a class="text-decoration-none text-success" href="#" (click)="changeTab('metro')">NAMMA METRO</a>
         </li>
     </ul>
+</div>
+<div class="d-flex justify-content-center">
+    <img src="public/bus1.png" alt="KSRTC Image">
+    </div>
+<app-searchbar></app-searchbar>
+<div class="row">
+    <div class="col-12">
+        @if (selectedTab === 'ksrtc') {
+            <app-ksrtc></app-ksrtc>
+        } @else if (selectedTab === 'bmtc') {
+            <app-bmtc></app-bmtc>
+        } @else if (selectedTab === 'metro'){
+            <app-metro></app-metro>
+        }
+    </div>
 </div>
